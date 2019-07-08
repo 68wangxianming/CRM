@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        // "targets": { "chrome": 74 },
+        "ignoreBrowserslistConfig": true,
+        "useBuiltIns": false,
+        "modules": false,
+        "exclude": ["transform-typeof-symbol"]
+      }
+    ],
+    [
+      "@babel/preset-react",
+      {
+        "targets": "last 2 versions, ie 11",
+        "modules": false
+      }
+    ],
+    ["@babel/preset-typescript"]
+  ],
+  "plugins": [
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "es",
+      "style": "css" // `style: true` 会加载 less 文件
+    }],
+    ["@babel/plugin-syntax-dynamic-import"],
+    ["@babel/plugin-transform-runtime"],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]]
+}

@@ -1,0 +1,12 @@
+/*:root{*/
+    /*--navColor: yellowgreen;*/
+/*}*/
+/*.components-demo{*/
+    /*& .nav{*/
+        /*color: var(--navColor)*/
+    /*}*/
+/*}*/
+*{
+    margin: 0;
+    padding: 0;
+}
