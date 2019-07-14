@@ -1,5 +1,5 @@
 {
-  "name": "CRM1",
+  "name": "CRM",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -30,6 +30,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@types/jest": "^24.0.15",
+    "@types/koa-static": "^4.0.1",
     "@types/node": "^12.0.8",
     "@types/react": "^16.8.20",
     "@types/react-dom": "^16.8.4",
@@ -50,6 +51,11 @@
     "jest-stare": "^1.16.0",
     "json2ts": "0.0.7",
     "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-simple-router": "^0.2.0",
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
+    "koa2-connect-history-api-fallback": "^0.1.2",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "mobx": "^5.10.1",
@@ -71,7 +77,8 @@
     "webpack-build-notifier": "^1.0.3",
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "workbox-webpack-plugin": "^4.3.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.4.4",
@@ -79,7 +86,7 @@
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.7",
     "mini-css-extract-plugin": "^0.7.0",
     "node-bash-title": "0.0.2",
     "optimize-css-assets-webpack-plugin": "^5.0.1",

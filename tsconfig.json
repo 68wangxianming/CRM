@@ -13,7 +13,8 @@
     "emitDecoratorMetadata": true,
     "baseUrl": "./src",
     "paths": {
-      "@components/*": ["web/components/*"]
+      "@components/*": ["web/components/*"],
+      "@pages/*": ["web/pages/*"]
     }
   },
   "include": [

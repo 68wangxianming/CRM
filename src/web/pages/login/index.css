@@ -1,4 +1,4 @@
-#main{
+#main {
   height: 100%;
   & .container {
     width: 100%;
@@ -6,7 +6,7 @@
     background: url("../../assets/images/bg.jpeg") no-repeat center !important;
     background-size: cover;
     overflow: hidden;
-    & section {
+    & .section {
       max-width: 500px;
       background-color: #FFFFFF;
       padding: 30px;

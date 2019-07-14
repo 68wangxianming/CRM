@@ -1,14 +1,13 @@
 import "./index.css";
 import * as React from "react";
 import {Form, Icon, Input, Button, Checkbox} from 'antd';
-import {withRouter} from 'react-router-dom'
 
 const {useState, useContext} = React;
 import YdStore from "../../models/index";
 
 const Login = (routerProps: any) => {
     const {location, history} = routerProps;
-    const RedirectUrl = location.state ? location.state.from.pathname : "/demo";
+    const RedirectUrl = location.state ? location.state.from.pathname : "/home";
     const ydstore = useContext(YdStore);
 
     const handleSubmit = (e: React.FormEvent<HTMLElement>) => {
@@ -33,7 +32,7 @@ const Login = (routerProps: any) => {
 
 
     return <div className="container">
-        <section>
+        <section className="section">
             <span>token:{ydstore.token}</span>
             <h4 className="test">欢迎登陆后台管理系统！</h4>
             <Form onSubmit={e => {
@@ -70,4 +69,4 @@ const Login = (routerProps: any) => {
         </section>
     </div>
 };
-export default withRouter(Login);
+export default Login;

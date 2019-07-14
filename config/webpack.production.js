@@ -38,7 +38,7 @@ module.exports = {
         // }),
         new HtmlWebpackPlugin({
             title: "CRM开发环境",
-            filename: "index.html",
+            filename: "../views/index.html",
             template: resolve(__dirname, "../src/web/index-prod.html"),
             inject: true,
             minify: {

@@ -35,7 +35,7 @@ const Login = () => {
     return useObserver(() => (
         <div>
             <input type="text" value={todos.value} ref={inputRef} onChange={e=>todos.value = e.target.value}/>
-            {/*<button onClick={addTodo}>点击添加</button>*/}
+            <button onClick={addTodo}>点击添加</button>
         </div>
     ))
 };

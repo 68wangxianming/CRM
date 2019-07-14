@@ -6,19 +6,20 @@ const {join, resolve} = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ManifestPlugin = require('webpack-manifest-plugin');//manifest.json
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
+// const {GenerateSW} = require('workbox-webpack-plugin');
 const _modeflag = _mode == "production" ? true : false;
 // const DashboardPlugin = require('webpack-dashboard/plugin');//面板
 const setTitle = require('node-bash-title');
 setTitle('🍎🍎🍎🍎🍎CRM1🍎🍎🍎🍎');
 
 let webpackConfig = {
-    entry: [
-        './src/web/index.tsx'
-    ],
+    entry: {
+        app: resolve("src/web/index.tsx")
+    },
     output: {
-        path: resolve(__dirname, './dist/assets'),
+        path: join(__dirname, "./dist/assets"),
         filename: '[name].js',
-
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -105,6 +106,22 @@ let webpackConfig = {
     },
     plugins: [
         new ProgressBarPlugin(),
+        // new GenerateSW({
+        //     importWorkboxFrom:'local',
+        //     cacheId: 'webpack-pwa', // 设置前缀
+        //     skipWaiting: true, // 强制等待中的 Service Worker 被激活
+        //     clientsClaim: true, // Service Worker 被激活后使其立即获得页面控制权
+        //     swDest: 'service-wroker.js', // 输出 Service worker 文件
+        //     globPatterns: ['**/*.{html,js,css,png.jpg}'], // 匹配的文件
+        //     globIgnores: ['service-wroker.js'], // 忽略的文件
+        //     runtimeCaching: [
+        //         // 配置路由请求缓存
+        //         {
+        //             urlPattern: /.*\.js/, // 匹配文件
+        //             handler: 'networkFirst' // 网络优先
+        //         }
+        //     ]
+        // }),
         new MiniCssExtractPlugin({
             filename: _modeflag ? "styles/[name].[contenthash:5].css" : "",
             chunkFilename: _modeflag ? "styles/[name].[contenthash:5].css" : ""
