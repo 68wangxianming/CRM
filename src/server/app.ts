@@ -43,7 +43,6 @@ app.use(historyApiFallback({index: "/", whiteList: ["/api"]}));
 app.use(router.routes());
 app.use(serve(config.staticDir)); // 静态资源文件
 
-
 app.listen(config.port, () => {
     console.log("🍺🍺🍺🍺🍺");
 });

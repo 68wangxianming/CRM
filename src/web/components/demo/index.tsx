@@ -9,10 +9,11 @@ import {useFetch} from "react-hooks-fetch";
 
 const {useContext, Suspense} = React;
 const DisplayRemoteData = () => {
-    const {error, data} = useFetch("http://...");
-    if (error) return <span>Error:{error.message}</span>;
-    if (!data) return null; // this is important
-    return <span>RemoteData:{data}</span>;
+    // const {error, data} = useFetch("http://...");
+    // if (error) return <span>Error:{error.message}</span>;
+    // if (!data) return null; // this is important
+    // return <span>RemoteData:{data}</span>;
+    return <span>error</span>;
 };
 
 const demo = observer(() => {
